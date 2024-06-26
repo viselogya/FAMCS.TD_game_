@@ -1,8 +1,9 @@
 #include "Menu.h"
 
-Menu::Menu(sf::RenderWindow& window)
-	:
-	m_window(window)
+Menu::Menu(sf::RenderWindow& window, Game& game)
+    :
+    m_window(window),
+    m_game(game)
 {
 	m_font.loadFromFile("arialmt.ttf");
 
@@ -19,7 +20,7 @@ void Menu::show() {
             }
             if (event.type == sf::Event::MouseButtonPressed) {
                 if (m_playButton->isClicked(sf::Mouse::getPosition(m_window))) {
-
+                    m_game.RunGame();
                 }
                 if (m_exitButton->isClicked(sf::Mouse::getPosition(m_window))) {
                     m_window.close();

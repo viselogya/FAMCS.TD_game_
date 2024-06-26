@@ -1,13 +1,13 @@
 #include "Menu.h"
+#include "Game.h"
 
 #include <SFML/Graphics.hpp>
 
-
-
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "FAMCS Tower Defense");
 
-    Menu menu(window);
+    Game game(window);
+    Menu menu(window, game);
     menu.show();
 
     return 0;
