@@ -141,14 +141,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="PushButton.cpp" />
-    <ClCompile Include="Tiles.cpp" />
+    <ClCompile Include="GameSprites.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="PushButton.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Tiles.h" />
+    <ClInclude Include="GameSprites.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
