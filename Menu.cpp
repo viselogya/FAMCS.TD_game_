@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include "Constants.h"
 
 Menu::Menu(sf::RenderWindow& window, Game& game)
     :
@@ -7,8 +8,8 @@ Menu::Menu(sf::RenderWindow& window, Game& game)
 {
 	m_font.loadFromFile("arialmt.ttf");
 
-	m_playButton = std::make_unique<PushButton>(300, 200, 200, 50, "Play", m_font);
-	m_exitButton = std::make_unique<PushButton>(300, 300, 200, 50, "Exit", m_font);
+	m_playButton = std::make_unique<PushButton>(WINDOW_WIDTH / 2 - 100, WINDOW_HEIGHT / 2 - 100, 200, 50, "Play", m_font);
+	m_exitButton = std::make_unique<PushButton>(WINDOW_WIDTH / 2 - 100, WINDOW_HEIGHT / 2 + 100, 200, 50, "Exit", m_font);
 }
 
 void Menu::show() {

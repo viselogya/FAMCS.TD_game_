@@ -1,14 +1,18 @@
 #pragma once
 
-#ifndef CONSTANTS
-#define CONSTANTS
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
 
-const int WINDOW_WIDTH = 800;
-const int WINDOW_HEIGHT = 600;
+#include <SFML/Graphics.hpp>
 
-const int TILE_SIZE = 40;
+// Объявление констант
+extern unsigned int WINDOW_WIDTH;
+extern unsigned int WINDOW_HEIGHT;
+extern unsigned int TILE_SIZE;
+extern unsigned int GRID_WIDTH;
+extern unsigned int GRID_HEIGHT;
 
-const int GRID_WIDTH = WINDOW_WIDTH / TILE_SIZE;
-const int GRID_HEIGHT = WINDOW_HEIGHT / TILE_SIZE;
+// Функция для инициализации констант
+void initializeConstants(const sf::RenderWindow& window);
 
-#endif // CONSTANTS
+#endif // CONSTANTS_H

@@ -1,6 +1,6 @@
-#include "GameSprites.h"
+#include "GameTextures.h"
 
-GameSprites::GameSprites()
+GameTextures::GameTextures()
 {
     emptyTileTexture.loadFromFile("EmptyTile.png");
     treeTexture.loadFromFile("TheTree.png");
@@ -13,7 +13,7 @@ GameSprites::GameSprites()
     turn4Texture.loadFromFile("Turn4.png");
 
 
-    emptyTile.setTexture(emptyTileTexture);
+    /*emptyTile.setTexture(emptyTileTexture);
     tree.setTexture(treeTexture);
     stones.setTexture(stonesTexture);
     horizontalRoad.setTexture(horizontalRoadTexture);
@@ -21,5 +21,5 @@ GameSprites::GameSprites()
     turn1.setTexture(turn1Texture);
     turn2.setTexture(turn2Texture);
     turn3.setTexture(turn3Texture);
-    turn4.setTexture(turn4Texture);
+    turn4.setTexture(turn4Texture);*/
 }

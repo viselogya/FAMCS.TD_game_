@@ -3,8 +3,10 @@
 #ifndef GAME
 #define GAME
 
-#include "GameSprites.h"
+#include "GameTextures.h"
+#include "Tile.h"
 #include <SFML/Graphics.hpp>
+#include <vector>
 
 class Game
 {
@@ -16,10 +18,11 @@ public:
 
 private:
 
-	//void GenerateGameField();
+	void GenerateGameField();
 
 	sf::RenderWindow& m_window;
-	GameSprites sprites;
+	GameTextures textures;
+	std::vector<Tile> m_gameField;
 };
 
 #endif // GAME

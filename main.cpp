@@ -5,11 +5,10 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "FAMCS Tower Defense");
+    sf::RenderWindow window(sf::VideoMode(sf::VideoMode::getDesktopMode()), "FAMCS Tower Defense", sf::Style::Fullscreen);
+    initializeConstants(window);
 
     Game game(window);
     Menu menu(window, game);
     menu.show();
-
-    return 0;
 }

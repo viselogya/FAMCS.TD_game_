@@ -1,11 +1,10 @@
 #include "Game.h"
-#include "Constants.h"
 
 Game::Game(sf::RenderWindow& window)
 	:
 	m_window(window)
 {
-    //GenerateGameField();
+    GenerateGameField();
 }
 
 void Game::RunGame() {
@@ -20,8 +19,17 @@ void Game::RunGame() {
         }
         
         m_window.clear();
-        m_window.draw(sprites.emptyTile);
+        /*for (const auto& i : m_gameField) {
+            i.draw(m_window);
+        }*/
         m_window.display();
     }
-	
+}
+
+void Game::GenerateGameField() {
+    /*for (size_t i = 0; i < GRID_HEIGHT; ++i) {
+        for (size_t j = 0; j < GRID_WIDTH; ++j) {
+            m_gameField.emplace_back(i * TILE_SIZE, j * TILE_SIZE, textures.emptyTileTexture);
+        }
+    }*/
 }
